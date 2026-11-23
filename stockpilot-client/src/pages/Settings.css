@@ -1,0 +1,237 @@
+
+/* STOCKPILOT - PROFESSIONAL SETTINGS */
+
+.settings-page {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    color: #e8edf5;
+    padding-bottom: 25px;
+}
+
+/* PAGE HEADING */
+
+.settings-heading {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.settings-heading h1 {
+    color: #f5f7fb;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+.settings-heading p {
+    color: #8d9bb0;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* SETTINGS CARDS */
+
+.settings-section {
+    background: linear-gradient(145deg, #192840, #142137);
+    border: 1px solid #2c405d;
+    border-radius: 13px;
+    padding: 25px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.settings-section:hover {
+    border-color: #405b7e;
+}
+
+/* SECTION HEADING */
+
+.settings-section-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #304057;
+    color: #82a9db;
+}
+
+.settings-section-heading svg {
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.settings-section-heading h3 {
+    color: #f5f7fb;
+    font-size: 16px;
+    font-weight: 650;
+    margin: 0 0 6px;
+}
+
+.settings-section-heading p {
+    color: #8d9bb0;
+    font-size: 13px;
+    margin: 0;
+}
+
+/* FORM GRID */
+
+.settings-fields {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 23px;
+    padding-top: 23px;
+}
+
+.settings-fields label {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+    color: #bdc9da;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+/* INPUTS AND DROPDOWNS */
+
+.settings-fields input:not([type="checkbox"]),
+.settings-fields select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px 14px;
+    background: #101b2d;
+    border: 1px solid #344761;
+    border-radius: 8px;
+    outline: none;
+    color: #f5f7fb;
+    font-family: inherit;
+    font-size: 13px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-fields select {
+    cursor: pointer;
+}
+
+.settings-fields select option {
+    background: #17243a;
+    color: #ffffff;
+}
+
+.settings-fields input:focus,
+.settings-fields select:focus {
+    border-color: #6d9edc;
+    box-shadow: 0 0 0 3px rgba(109, 158, 220, 0.12);
+}
+
+/* TOGGLE SETTINGS */
+
+.settings-fields .settings-toggle {
+    min-height: 44px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 10px 14px;
+    background: #111e32;
+    border: 1px solid #2e415c;
+    border-radius: 8px;
+    cursor: pointer;
+}
+.settings-toggle input {
+    width: 17px;
+    height: 17px;
+    accent-color: #6d91c2;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+/* APPLICATION INFORMATION */
+
+.app-info {
+    background: #142137;
+}
+
+.settings-version {
+    color: #8d9bb0;
+    font-size: 13px;
+    margin: 18px 0 0 33px;
+}
+
+/* ERROR AND SUCCESS */
+
+.settings-error {
+    color: #fb7185;
+    font-size: 13px;
+}
+
+.settings-success {
+    color: #4ade80;
+    font-size: 13px;
+}
+
+/* SAVE BUTTON */
+
+.settings-actions {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 16px;
+}
+
+.settings-actions button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+    padding: 12px 22px;
+    background: linear-gradient(135deg, #477fbd, #38689f);
+    border: 1px solid #6192c8;
+    border-radius: 8px;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.settings-actions button:hover {
+    background: linear-gradient(135deg, #568dcc, #4778b8);
+    transform: translateY(-1px);
+}
+
+.settings-actions button:focus-visible {
+    outline: 3px solid rgba(130, 169, 219, 0.5);
+    outline-offset: 3px;
+}
+
+.settings-actions button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+    .settings-fields {
+        grid-template-columns: 1fr;
+    }
+
+    .settings-section {
+        padding: 19px;
+    }
+
+    .settings-heading h1 {
+        font-size: 24px;
+    }
+
+    .settings-actions {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .settings-actions button {
+        width: 100%;
+    }
+}

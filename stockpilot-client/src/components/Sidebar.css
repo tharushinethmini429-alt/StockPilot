@@ -1,0 +1,207 @@
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 270px;
+    height: 100vh;
+    min-height: 100vh;
+    flex-shrink: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 30px 19px 22px;
+
+    background: linear-gradient(180deg, #111c30 0%, #0e1728 100%);
+    color: #fff;
+    border-right: 1px solid #26344d;
+
+    box-sizing: border-box;
+    z-index: 200;
+    overflow-y: auto;
+}
+
+/* BRAND */
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 0 9px;
+    margin-bottom: 52px;
+}
+.brand-icon {
+    width: 46px;
+    height: 46px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #477bff, #795bff);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 14px;
+    box-shadow: 0 7px 20px rgba(71, 123, 255, 0.25);
+}
+.sidebar-brand h2 {
+    margin: 0;
+    color: #f5f7ff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+}
+.sidebar-brand span {
+    display: block;
+    margin-top: 3px;
+    color: #8495b2;
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+}
+
+/* NAVIGATION LABEL */
+.sidebar label {
+    display: block;
+    padding: 0 12px;
+    margin-bottom: 15px;
+    color: #71829f;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+}
+
+/* NAVIGATION LINKS */
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+.sidebar-link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-height: 48px;
+    padding: 12px 14px;
+    color: #9eacc4;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid transparent;
+    border-radius: 11px;
+    transition:
+    background 0.25s ease,
+    color 0.25s ease,
+    border-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* HOVER */
+.sidebar-link:hover {
+    background: rgba(71, 123, 255, 0.09);
+    border-color: rgba(71, 123, 255, 0.14);
+    color: #ffffff;
+    transform: translateX(3px);
+}
+
+/* ACTIVE LINK */
+.sidebar-link.active {
+    background: linear-gradient(
+        100deg,
+        rgba(71, 123, 255, 0.23),
+        rgba(100, 91, 255, 0.11)
+    );
+    border-color: rgba(91, 137, 255, 0.27);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: inset 3px 0 0 #6592ff;
+}
+.sidebar-link.active svg {
+    color: #78a5ff;
+}
+
+/* BOTTOM AREA */
+.sidebar-bottom {
+    margin-top: auto;
+    flex-shrink: 0;
+}
+.sidebar-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding: 19px 7px 0;
+    border-top: 1px solid #26344d;
+}
+.sidebar-avatar {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #344c78, #273957);
+    border: 1px solid #465c7e;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 800;
+}
+.sidebar-user-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+.sidebar-user-info strong {
+    color: #e8efff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.sidebar-footer strong {
+    display: block;
+    margin-bottom: 3px;
+    color: #e8efff;
+    font-size: 12px;
+    font-weight: 700;
+}
+.sidebar-footer span {
+    color: #8495b2;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .sidebar {
+        width: 225px;
+        padding-left: 13px;
+        padding-right: 13px;
+    }
+}
+@media (max-width: 600px) {
+    .sidebar {
+        width: 76px;
+        padding: 24px 10px;
+    }
+    .sidebar-brand {
+        justify-content: center;
+        padding: 0;
+        margin-bottom: 40px;
+    }
+    .sidebar-brand > div:last-child,
+    .sidebar label,
+    .sidebar-link span,
+    .sidebar-footer > div:last-child {
+        display: none;
+    }
+    .sidebar-link {
+        justify-content: center;
+        padding: 13px 5px;
+    }
+    .sidebar-footer {
+        justify-content: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+}

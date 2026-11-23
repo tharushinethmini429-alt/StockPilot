@@ -1,0 +1,28 @@
+# Node.js
+**/node_modules/
+**/dist/
+
+# .NET
+**/bin/
+**/obj/
+.vs/
+*.user
+*.suo
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Database files
+*.db
+*.sqlite
+*.mdf
+*.ldf
+
+# Logs
+*.log
+
+# Local development settings
+**/appsettings.Development.json
+**/Properties/launchSettings.json
